@@ -11,28 +11,43 @@ React.js exmaple for [Sora Labo](https://sora-labo.shiguredo.jp).
 - MIT LICENSE / MITライセンス
 
 
-# How to Use / 利用方法
+# 利用方法
+
+## 事前準備
+
+- GitHub アカウントで、[Sora Labo](https://sora-labo.shiguredo.jp) にサインアップ
+- シグナリングキーを取得
+
+## GitHub Pages で実行
+
+- ブラウザを2つ起動、それぞれ https://mganeko.github.io/reactjs_sora/ にアクセス
+- Video Codec を選び、[Start Video]ボタンをクリック
+- SignalingKey: に Sora Labo のシグナリングキーを入力
+- Room: にルーム名(Channel名)を入力
+  - Username@RoomID の形式 
+- [Coonect]ボタンをクリックして接続
+
+URLを次の形式で指定することで、シグナリングキーとルーム名を指定可能
+
+- https://mganeko.github.io/reactjs_sora/?room=ルーム名&key=シグナリングキー
 
 
-## Available Scripts
+## 開発環境で実行
 
-In the project directory, you can run:
+- $ git clone https://github.com/mganeko/reactjs_sora.git
+- $ cd reactjs_sora
+- $ npm install 
+- $ npm start
+- http:localhost:3000 にブラウザでアクセス
+- その後は GitHub Pages の例と同様 
 
-### `npm start`
+## 自分のサーバーで実行
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- $ git clone https://github.com/mganeko/reactjs_sora.git
+- $ cd reactjs_sora
+- $ npm install 
+- $ npm run build
+- build/ 以下をWebサーバーに配置(要https)
+- 配置したWebサーバーにブラウザーでアクセス
+- その後は GitHub Pages の例と同様 
 
