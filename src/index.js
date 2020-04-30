@@ -13,7 +13,7 @@ import './index.css';
 
 // ------ params -----
 const signalingUrl = 'wss://sora-labo.shiguredo.jp/signaling';
-let roomId = 'mm-react-sora-test';
+let roomId = 'user@sora-room';
 const roomFromUrl = getRoomFromUrl();
 if (roomFromUrl && (roomFromUrl !== '')) {
   roomId = roomFromUrl;
@@ -203,6 +203,8 @@ class App extends React.Component {
       })
       .catch(err => {
         console.error('sora connect ERROR:', err);
+        this.publisher = null;
+        this.setState({ connected: false });
       });
   }
 
